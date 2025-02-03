@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .  # O contexto é a raiz do projeto
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5001:5000"
+    networks:
+      - minha-rede
+
+  frontend:
+    build:
+      context: .  # O contexto é a raiz do projeto
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3001:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5001/api/v1
+    depends_on:
+      - backend
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
