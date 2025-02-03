@@ -50,12 +50,11 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 ### Para rodar o projeto com Docker Compose:
 
 1. Clone o repositório:
+
    ```
    git clone https://github.com/rc-ventura/api-acomodacoes_app.git
    cd api-acomodacoes_app
    ```
-
-````
 
 2. Rode o comando abaixo para iniciar os containers backend e frontend:
 
@@ -150,4 +149,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 ```
 
 ```
-````
+
+```
+
+```
