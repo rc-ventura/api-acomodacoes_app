@@ -50,7 +50,7 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 ### Para rodar o projeto com Docker Compose:
 
 1. Clone o repositório:
-   ```bash
+   ```
    git clone https://github.com/rc-ventura/api-acomodacoes_app.git
    cd api-acomodacoes_app
    ```
@@ -59,7 +59,7 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 2. Rode o comando abaixo para iniciar os containers backend e frontend:
 
-   ```bash
+   ```
    docker-compose up --build
    ```
 
@@ -71,13 +71,13 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 1. Instale as dependências:
 
-   ```bash
+   ```
    cd backend
    pip install -r requirements.txt
    ```
 
 2. Inicie o servidor:
-   ```bash
+   ```
    python3 -m app.main
    ```
 
@@ -85,13 +85,13 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 1. Instale as dependências:
 
-   ```bash
+   ```
    cd frontend
    npm install
    ```
 
 2. Inicie o servidor:
-   ```bash
+   ```
    npm start
    ```
 
@@ -129,16 +129,16 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 1. Faça um fork do repositório.
 2. Crie uma branch para sua funcionalidade:
-   ```bash
+   ```
    git checkout -b feature/nome-da-funcionalidade
    ```
 3. Adicione suas alterações e faça commit:
-   ```bash
+   ```
    git add .
    git commit -m "Descrição da funcionalidade"
    ```
 4. Envie a branch para o repositório remoto:
-   ```bash
+   ```
    git push origin feature/nome-da-funcionalidade
    ```
 5. Abra um Pull Request para a branch `main`.
