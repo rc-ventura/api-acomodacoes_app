@@ -5,13 +5,13 @@ FROM node:16
 WORKDIR /app
 
 # Copiar arquivos de dependências
-COPY frontend/package.json frontend/package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Instalar dependências
 RUN npm install
 
 # Copiar o restante dos arquivos
-COPY frontend/ ./
+COPY . .
 
 # Construir o projeto React
 RUN npm run build

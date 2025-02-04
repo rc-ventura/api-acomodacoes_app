@@ -5,11 +5,11 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copiar o requirements.txt e instalar as dependências
-COPY backend/requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar o código do backend
-COPY backend/app ./app
+COPY app ./app
 
 # Expôr a porta 5000 (Flask)
 EXPOSE 5000

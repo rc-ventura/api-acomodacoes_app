@@ -45,28 +45,16 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 ```
 
-## Como Rodar o Projeto
+## Como Rodar o Projeto=
 
-### Para rodar o projeto com Docker Compose:
+### Para rodar o projeto com Docker Compose:(Nao implementado)
 
 1. Clone o repositório:
 
    ```
-   git clone https://github.com/rc-ventura/api-acomodacoes_app.git
-   cd api-acomodacoes_app
-   ```
-
-2. Rode o comando abaixo para iniciar os containers backend e frontend:
+   git clone https://github.c## Para rodar o Backend separadamente:
 
    ```
-   docker-compose up --build
-   ```
-
-3. Acesse a aplicação:
-   - Frontend: [http://localhost:3000](http://localhost:3000)
-   - Backend: [http://localhost:5000](http://localhost:5000)
-
-### Para rodar o Backend separadamente:
 
 1. Instale as dependências:
 
@@ -75,7 +63,7 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
    pip install -r requirements.txt
    ```
 
-2. Inicie o servidor:
+1. Inicie o servidor:
    ```
    python3 -m app.main
    ```
@@ -90,9 +78,24 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
    ```
 
 2. Inicie o servidor:
-   ```
+
+   ````
    npm start
+   ```om/rc-ventura/api-acomodacoes_app.git
+   cd api-acomodacoes_app
+   ````
+
+3. Rode o comando abaixo para iniciar os containers backend e frontend:
+
    ```
+   docker-compose up --build
+   ```
+
+4. Acesse a aplicação:
+   - Frontend: [http://localhost:3000](http://localhost:3000)
+   - Backend: [http://localhost:5000](http://localhost:5000)
+
+#
 
 ## Rotas Backend
 
