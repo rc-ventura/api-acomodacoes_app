@@ -21,19 +21,19 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
 
-- Node.js (para executar o frontend)
+- **Node.js** (para executar o frontend)
 
       Download: https://nodejs.org/
 
-- Docker (para rodar os contêineres do projeto)
+- **Docker** (para rodar os contêineres do projeto)
 
       Download: https://www.docker.com/get-started
 
-- Python 3.x (para rodar o backend)
+- **Python 3.x** (para rodar o backend)
 
       Download: https://www.python.org/downloads/
 
-- Docker Compose (para facilitar o gerenciamento dos contêineres)
+- **Docker Compose** (para facilitar o gerenciamento dos contêineres)
 
 Já incluído no Docker Desktop ou pode ser instalado separadamente: https://docs.docker.com/compose/install/
 
