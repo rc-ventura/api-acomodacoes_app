@@ -17,9 +17,25 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 - **Docker**: Utilizado para containerizar a aplicação backend.
 - **Axios**: Biblioteca para requisições HTTP entre frontend e backend.
 
-### Ambiente de Desenvolvimento:
+## Ambiente de Desenvolvimento:
 
-- **Docker Compose**: Para facilitar a execução simultânea de containers do frontend e backend.
+Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
+
+- Node.js (para executar o frontend)
+
+      Download: https://nodejs.org/
+
+- Docker (para rodar os contêineres do projeto)
+
+      Download: https://www.docker.com/get-started
+
+- Python 3.x (para rodar o backend)
+
+      Download: https://www.python.org/downloads/
+
+- Docker Compose (para facilitar o gerenciamento dos contêineres)
+
+Já incluído no Docker Desktop ou pode ser instalado separadamente: https://docs.docker.com/compose/install/
 
 ## Estrutura do Projeto
 
@@ -47,14 +63,26 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 ## Como Rodar o Projeto
 
-### Para rodar o projeto com Docker Compose
+### Para rodar o projeto com Docker Compose:
 
 1. Clone o repositório:
 
    ```
-   git clone https://github.c## Para rodar o Backend separadamente:
+   git clone https://github.com/rc-ventura/api-acomodacoes_app.git
+   cd api-acomodacoes_app
+   ```
+
+2. Rode o comando abaixo para iniciar os containers backend e frontend:
 
    ```
+   docker-compose up --build
+   ```
+
+3. Acesse a aplicação:
+   - Frontend: [http://localhost:3001](http://localhost:3001)
+   - Backend: [http://localhost:5001](http://localhost:5001)
+
+### Para rodar o Backend separadamente:
 
 1. Instale as dependências:
 
@@ -63,7 +91,7 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
    pip install -r requirements.txt
    ```
 
-1. Inicie o servidor:
+2. Inicie o servidor:
    ```
    python3 -m app.main
    ```
@@ -78,24 +106,9 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
    ```
 
 2. Inicie o servidor:
-
-   ````
+   ```
    npm start
-   ```om/rc-ventura/api-acomodacoes_app.git
-   cd api-acomodacoes_app
-   ````
-
-3. Rode o comando abaixo para iniciar os containers backend e frontend:
-
    ```
-   docker-compose up --build
-   ```
-
-4. Acesse a aplicação:
-   - Frontend: [http://localhost:3000](http://localhost:3000)
-   - Backend: [http://localhost:5000](http://localhost:5000)
-
-#
 
 ## Rotas Backend
 
