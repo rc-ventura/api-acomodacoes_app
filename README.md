@@ -45,9 +45,9 @@ Este projeto tem como objetivo criar uma aplicação para gerenciamento de acomo
 
 ```
 
-## Como Rodar o Projeto=
+## Como Rodar o Projeto
 
-### Para rodar o projeto com Docker Compose:(Nao implementado)
+### Para rodar o projeto com Docker Compose
 
 1. Clone o repositório:
 
