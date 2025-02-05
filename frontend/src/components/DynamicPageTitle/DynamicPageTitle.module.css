@@ -1,0 +1,25 @@
+/* Importando a fonte Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.pageTitleContainer {
+    font-family: 'Dancing Script', cursive; /* Usando a fonte Dancing Script */
+    font-size: 1.5rem; /* Tamanho do título */
+    font-weight: 400; /* Peso médio para a fonte */
+    color: #333; /* Cor mais suave, mas contrastante */
+    text-align: center; /* Centralizando o título */
+    margin-top: -1.5rem; /* Ajustando para subir mais o título */
+    margin-bottom: 4rem; /* Adicionando um espaço abaixo do título */
+    text-transform: capitalize; /* Faz com que as palavras fiquem com a primeira letra maiúscula */
+    letter-spacing: 1px; /* Espaçamento entre as letras para dar um efeito sutil */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+/* Hover para adicionar um efeito de transição */
+.pageTitleContainer:hover {
+    color: #ff6f61; /* Cor quando o título é 'hovered' */
+}
+
+/* Adicionando padding nos cards para afastá-los do título */
+.accommodation-grid {
+    padding-top: 50px; /* Padding superior para afastar os cards do título */
+}

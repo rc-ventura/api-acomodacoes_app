@@ -1,0 +1,97 @@
+/* Estilos gerais */
+.accommodationsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mensagens de erro */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.noResults {
+    color: red;
+    font-weight: bold;
+}
+
+/* Grid de acomodações */
+.accommodationGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Cards menores */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilizando os cards */
+.accommodationCard {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Aumentado o padding para dar mais espaço ao conteúdo */
+    width: 100%;
+    max-width: 300px;
+    min-height: 350px; /* Garantindo altura mínima para os cards */
+    margin: auto;
+}
+
+.accommodationCard:hover {
+    transform: scale(1.03);
+}
+
+/* Ajuste na imagem */
+.accommodationImage {
+    width: 80%; /* A imagem ocupará 80% da largura do card */
+    height: 180px; /* Aumentei a altura da imagem */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Aumentei o espaçamento abaixo da imagem */
+    border: 2px solid #ddd; /* Borda sutil ao redor da imagem */
+    margin-top: 10px; /* Adicionando um espaço acima da imagem */
+}
+
+/* 🔹 Novo ajuste para .imageLink */
+.imageLink {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* Informações dentro do card */
+.accommodationInfo {
+    padding: 10px 15px; /* Aumentando o padding para melhor espaçamento */
+    text-align: center;
+    width: 100%;
+    flex-grow: 1; /* Permitindo que o conteúdo cresça e preencha o espaço disponível */
+}
+
+.accommodationInfo h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.location {
+    color: #666;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .accommodationGrid {
+        grid-template-columns: 1fr; /* 1 card por linha em telas menores */
+    }
+}

@@ -1,0 +1,75 @@
+/* Botão de voltar */
+.backLink {
+    display: inline-block;
+    position: fixed; /* Fixo para ficar no corpo da página */
+    left: 20px; /* Distância da esquerda */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6f61;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer; /* Adiciona o efeito de pointer */
+    transition: background 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Efeito de hover: muda a cor e aumenta levemente */
+.backLink:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de clique: reduz levemente o tamanho */
+.backLink:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade para telas menores que 1038px */
+@media (max-width: 1038px) {
+    .backLink {
+        left: 20px;  /* Fixa no canto superior esquerdo */
+        top: 80px;   /* Distância ajustada para descer mais no corpo */
+        bottom: auto; /* Remove o posicionamento no fundo */
+    }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .backLink {
+        width: auto; /* Ajusta melhor o tamanho */
+        padding: 8px 16px;
+        font-size: 14px;
+        top: 70px; /* Distância ajustada para o corpo */
+        left: 15px;
+    }
+}
+/* Responsividade para telas entre 684px e 491px */
+@media (max-width: 684px) and (min-width: 490px) {
+    .backLink {
+        position: absolute; /* Agora ele será absoluto no corpo da página */
+        width: auto; /* Ajusta melhor o tamanho */
+        padding: 8px 16px;
+        font-size: 14px;
+        top: 80px; /* Desce um pouco mais o botão para não ficar no header */
+        left: 15px; /* Mantém o botão no canto superior esquerdo */
+        z-index: 9999;
+    }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    .backLink {
+        position: absolute; /* Mantém o botão absoluto no corpo da página */
+        width: auto; /* Ajusta melhor o tamanho */
+        padding: 6px 12px;
+        font-size: 12px;
+        top: 90px; /* Aumentei um pouco mais para ficar abaixo */
+        left: 15px; /* Ainda no canto superior esquerdo */
+        z-index: 9999;
+    }
+}
+

@@ -1,0 +1,89 @@
+.searchContainer {
+    position: absolute;
+    top: calc(50px + 20px);
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 300px;
+    width: fit-content;
+}
+
+/* Ajuste para telas menores que 1021px */
+@media (max-width: 1021px) {
+    .searchInput {
+        width: 220px;
+    }
+}
+
+/* Ajuste para telas menores que 775px - CENTRALIZA NO MEIO */
+@media (max-width: 775px) {
+    .searchContainer {
+        left: 50%; 
+        transform: translateX(-50%); /* Centraliza totalmente */
+        padding: 6px;
+        max-width: 280px;
+    }
+
+    .searchInput {
+        width: 200px;
+    }
+}
+
+/* Ajuste para telas menores que 567px */
+@media (max-width: 567px) {
+    .searchContainer {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px;
+        max-width: 250px;
+    }
+
+    .searchInput {
+        width: 180px;
+    }
+}
+
+/* Ajuste para telas menores que 480px */
+@media (max-width: 480px) {
+    .searchContainer {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px;
+        max-width: 220px;
+    }
+
+    .searchInput {
+        width: 160px;
+    }
+}
+
+.searchInput {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+}
+
+.searchButton {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+}
+
+.searchButton:hover {
+    background-color: #333;
+}

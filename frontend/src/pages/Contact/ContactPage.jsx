@@ -1,10 +1,10 @@
 import React from "react";
+import DynamicPageTitle from "../../components/DynamicPageTitle/DynamicPageTitle";
 
 const ContactPage = () => {
     return (
         <div>
-            <h1>Welcome to Contact Page</h1>
-            <p>This is a basic contact page in React.</p>
+            <DynamicPageTitle />
         </div>
     );
 };

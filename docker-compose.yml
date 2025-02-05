@@ -3,7 +3,7 @@ version: "3.8"
 services:
   backend:
     build:
-      context:  ./backend # O contexto é a raiz do projeto
+      context:  ./backend 
       dockerfile: Dockerfile
     ports:
       - "5001:5000"
@@ -12,7 +12,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend # O contexto é a raiz do projeto
+      context: ./frontend 
       dockerfile: Dockerfile
     ports:
       - "3001:3000"
