@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import styles from './AccommodationDetail.module.css'; // Importando os estilos como um módulo
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
-import BackButton from '../../components/BackButton/BackButton';
 
 const AccommodationDetail = () => {
   const [accommodation, setAccommodation] = useState(null);
@@ -47,7 +46,6 @@ const AccommodationDetail = () => {
           <FavoriteButton accommodation={accommodation} />
         </div>
       </div>
-      <BackButton />
     </div>
   );
 };

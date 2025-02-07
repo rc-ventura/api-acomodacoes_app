@@ -1,5 +1,5 @@
 import React from "react";
-import DynamicPageTitle from "../../components/DynamicPageTitle/DynamicPageTitle";
+import DynamicPageTitle from "../../components/TitleSubtitle/TitleSubtitle";
 
 const ContactPage = () => {
     return (

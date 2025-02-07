@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import DynamicPageTitle from "../../components/DynamicPageTitle/DynamicPageTitle";
+import DynamicPageTitle from "../../components/TitleSubtitle/TitleSubtitle";
 import styles from "./AccommodationList.module.css"; // Importando estilos
 
 const AccommodationList = () => {
