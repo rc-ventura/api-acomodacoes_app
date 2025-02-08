@@ -1,6 +1,7 @@
   import React, { useState } from "react";
   import Slider from "react-slick";
   import { Box, Typography } from "@mui/material";
+import IconSection from "../IconSection/IconSection";
 
   // Configurações do Slider
   const settings = {
@@ -26,6 +27,10 @@
         price: "R$ 450.000",
         localization: "Minas Gerais, MG",
         description: "Uma casa moderna e espaçosa em localização privilegiada.",
+        rooms: 4,
+        bathrooms: 3,
+        garage: 2,
+        area: "200 m²",
       },
       {
         img: "https://picsum.photos/1000/600?2",
@@ -34,6 +39,10 @@
         price: "R$ 300.000",
         localization: "São Paulo, SP",
         description: "Apartamento com 2 quartos e ótimo acesso a transportes públicos.",
+        rooms: 2,
+        bathrooms: 1,
+        garage: 1,
+        area: "75 m²",
       },
       {
         img: "https://picsum.photos/1000/600?3",
@@ -42,6 +51,10 @@
         price: "R$ 600.000",
         localization: "Rio de Janeiro, RJ",
         description: "Casa tranquila em meio à natureza, ideal para descanso.",
+        rooms: 3,
+        bathrooms: 2,
+        garage: 1,
+        area: "150 m²",
       },
       {
         img: "https://picsum.photos/1000/600?4",
@@ -50,14 +63,17 @@
         price: "R$ 1.200.000",
         localization: "Florianópolis, SC",
         description: "Cobertura de alto padrão com vista deslumbrante da cidade.",
+        rooms: 5,
+        bathrooms: 4,
+        garage: 3,
+        area: "300 m²",
       },
     ];
-
-    
 
     return (
       <div>
         {/* Box que envolve o slider */}
+        
         <Box
           sx={{
             width: "100%", // A largura do componente vai ocupar 100% da tela
@@ -74,7 +90,6 @@
               backgroundColor: "f8f9fa", // Fundo branco para o box
               borderRadius: "10px", // Bordas arredondadas
               boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)", // Sombra suave
-              padding: "50px", // Adiciona espaçamento interno
             }}
           >
 
@@ -85,7 +100,7 @@
           afterChange={(index) => setCurrentIndex(index)} // Atualiza o slide atual
         >
           {/* Slides serão gerados automaticamente com base nos dados*/}
-          {slidesData.map((slide, index) => (
+          {slidesData.map((index) => (
             <div key={index} />
           ))}
             
@@ -98,13 +113,15 @@
                 style={{
                   width: "100%",
                   height: "auto",
-                  borderRadius: "10px",
+                  borderRadius: "10px 0px 0px 10px",
                   boxShadow: "5px"
                 }}
               />
             </Box>
 
             {/* Card explicativo */}
+
+            
             <Box
               sx={{
                 width: "60%", // O card ocupará a outra metade
@@ -122,26 +139,31 @@
                    Cód: {slidesData[currentIndex].cod} </Typography>
 
 
-              <Typography variant="h5" sx={{ fontWeight: "bold", color: "#333", marginBottom: '5rem' }}>
-                {slidesData[currentIndex].title}
+              <Typography variant="h4" sx={{ 
+                          fontWeight: "bold", 
+                          color: "#333", 
+                          marginBottom: '1rem' }}>
+                          {slidesData[currentIndex].title}
               </Typography>
 
               <Typography variant="h7" sx={{ fontWeight: "normal", color: "#333", marginBottom: '5rem' }}>
                 {slidesData[currentIndex].localization}
               </Typography>
 
-              <Typography variant="h6" sx={{ fontWeight: "bold", color: "#007bff", marginTop: "10px" }}>
-                {slidesData[currentIndex].price}
+              <Typography variant="h5" sx={{ 
+                        fontWeight: "normal", 
+                        color: "#007bff", 
+                         }}>
+                        {slidesData[currentIndex].price}
               </Typography>
 
               <Typography variant="body1" sx={{ marginTop: "10px", color: "#555" }}>
                 {slidesData[currentIndex].description}
               </Typography>
 
-              {/* Botão
-              <Button variant="contained" color="primary" sx={{ marginTop: "20px" }}>
-                Saiba mais
-              </Button> */}
+              <IconSection icon={slidesData[currentIndex]} />
+
+
             </Box>
           </Box>
         </Box>

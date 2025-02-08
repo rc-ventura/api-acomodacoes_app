@@ -81,12 +81,7 @@ const StaticCard = () => {
 
           {/* Botões do Card */}
           <Box sx={{ display: "flex", justifyContent: "space-between", padding: "10px" }}>
-            <Button variant="contained" color="primary" size="small">
-              Saiba mais
-            </Button>
-            <Button variant="outlined" color="secondary" size="small">
-              Favoritar
-            </Button>
+           
           </Box>
         </Card>
       ))}
