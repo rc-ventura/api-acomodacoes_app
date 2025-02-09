@@ -16,22 +16,24 @@ const IconSection = ({ icon }) => {
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          marginTop: "8rem",
+          marginTop: "6rem",
           color: "#ff6f61",
+          padding:"1rem",
+          marginBottom:"1rem"
           
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-          <StraightenIcon fontSize="small" /> <Typography color="#333">{icon.area}</Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <StraightenIcon  fontSize="small" /> <Typography   color="#333">{icon.area}</Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-          <BedIcon fontSize="small" /> <Typography color="#333">{icon.rooms}</Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <BedIcon fontSize="small" /> <Typography  color="#333">{icon.rooms}</Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-          <BathtubIcon fontSize="small" /> <Typography color="#333">{icon.bathrooms}</Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <BathtubIcon fontSize="small" /> <Typography  color="#333">{icon.bathrooms}</Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-          <DirectionsCarIcon fontSize="small" /> <Typography color="#333">{icon.garage}</Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <DirectionsCarIcon fontSize="small" /> <Typography  color="#333">{icon.garage}</Typography>
         </Box>
       </Box>
 

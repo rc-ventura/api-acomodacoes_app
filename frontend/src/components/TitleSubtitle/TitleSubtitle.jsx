@@ -2,24 +2,58 @@ import React from 'react';
 import { Typography, Box } from '@mui/material';
 
 const TitleSubtitle = ({ 
-        title, 
-        subtitle, 
-        titleVariant,  
-        subtitleVariant }) => {
-          
+  title, 
+  subtitle, 
+  titleVariant,  
+  subtitleVariant
+}) => {
   return (
-    <Box sx={{ textAlign: 'left', marginLeft: '5rem', marginTop: '4rem', marginBottom: '3rem' }}>
-      {/* Título */}
+    <Box 
+      sx={{ 
+        textAlign: { xs: "center", sm: "center", md: "left" }, 
+        marginLeft: { xs: "auto", sm: "auto", md: "5rem" }, 
+        marginRight: { xs: "auto", sm: "auto", md: "0" }, 
+        marginTop: { xs: "1rem", sm: "1rem", md: "3rem" }, //  Reduzido para telas pequenas
+        marginBottom: "3rem",
+        maxWidth: { xs: "95%", sm: "85%", md: "60%" }, 
+        padding: { xs: "5px", sm: "15px", md: "0px" }, //  Menos padding em telas pequenas
+      }}
+    >
+      {/* Título ajustado para iPhone SE */}
       <Typography 
         variant={titleVariant} 
-        sx={{ fontWeight: 'bold', 
-              fontSize: '2.5rem', 
-               color: '#ff6f61' }}>
+        sx={{ 
+          fontWeight: 'bold', 
+          fontSize: { 
+            xs: "1.8rem", //  Reduzido para iPhone SE
+            sm: "2.8rem", 
+            md: "4rem" ,
+          },
+          color: '#ff6f61',
+          overflowWrap: "break-word", 
+          textAlign: { xs: "center", md: "left" }, 
+        }}
+      >
         {title}
       </Typography>
-
-      {/* Subtítulo */}
-      <Typography variant={subtitleVariant} sx={{ fontSize: '1.25rem', color: '#555' }}>
+        
+      {/* Subtítulo ajustado para telas */}
+      <Typography 
+        variant={subtitleVariant} 
+        sx={{ 
+          fontSize: { 
+            xs: "1rem", // 🔥 Menor para iPhone SE
+            sm: "1.5rem", 
+            md: "2rem" 
+            
+          },
+          color: '#555',
+          overflowWrap: "anywhere", 
+          maxWidth: "100%", 
+          textAlign: { xs: "center", md: "left" }, 
+          padding: { xs: "5px", sm: "10px", md: "0px" }, 
+        }}
+      >
         {subtitle}
       </Typography>
     </Box>
