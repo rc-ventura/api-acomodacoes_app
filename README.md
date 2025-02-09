@@ -79,8 +79,8 @@ Já incluído no Docker Desktop ou pode ser instalado separadamente: https://doc
    ```
 
 3. Acesse a aplicação:
-   - Frontend: [http://localhost:3001](http://localhost:3001)
-   - Backend: [http://localhost:5001](http://localhost:5001)
+   - Frontend: [http://localhost:3000/acomodacoes](http://localhost:3000/acomodacoes)
+   - Backend: [http://localhost:5001/api/v1/acomodacoes](http://localhost:5001/api/v1/acomodacoes)
 
 ### Para rodar o Backend separadamente:
 
@@ -119,8 +119,26 @@ Já incluído no Docker Desktop ou pode ser instalado separadamente: https://doc
 
 **Observação**: A API ainda não está conectada a um banco de dados. As informações estão armazenadas de forma estática por enquanto.
 
+## Rotas Frontend
+
+### As telas foram desenvolvidas utilizando JS com React e oferece as seguintes rotas:
+
+- **/acomodacoes**: Lista as acomodações
+- **/acomodacoes/:id**: Retorna os detalhes de uma acomodação específica.
+- **/acomodacoes/home**:  Tela principal da page.
+
+
+**Observação**: Os dados provenientes da página Home são estáticos. Ainda não está conectada a chamada da API (Backend).
+
+
 ## Funcionalidades Implementadas no Frontend
 
+- **Tela de Início**: Tela de Home responsiva e finalizada.
+- **Footer**: Footer da page responsivo e finalizado.
+- **Barra de Navegação**: Barra de navegação responsivo e finalizado.
+- **Banner**: Banner da página principal finalizado.
+- **Slider de Imagens**: Um slider de imagens responsivo e dinâmico finalizado.
+- **Cards**: Cards que apresentam as acomodações de forma sucinta e responsivos finalizados
 - **Exibição das Acomodações**: O frontend consegue consumir a API para exibir uma lista de acomodações.
 - **Detalhes da Acomodação**: Ao clicar em uma acomodação, o usuário é direcionado para a página de detalhes da acomodação.
 - **Filtro por localização**: Ao buscar uma acomodação por localização, o usuário filtra por localização.
@@ -133,6 +151,10 @@ Já incluído no Docker Desktop ou pode ser instalado separadamente: https://doc
 - **Integração com Banco de Dados**: Adicionar suporte a um banco de dados (por exemplo, PostgreSQL ou MySQL) para armazenar as acomodações.
 - **Gestão do projeto**: Ajustar as pastas e organização do projeto.
 - **Melhorar o layout**: Fazer ajustes no layout.
+- **Conteúdo das novas páginas**: criar conteúdos das novas páginas.
+- **Sincronizar as imagens**: As imagens da aplicação são provenientes de uma API de imagens.
+
+
 
 ## O Que Falta no Backend
 
