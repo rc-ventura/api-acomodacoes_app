@@ -9,6 +9,8 @@
 body {
   background: #f8f9fa;
   color: #333;
+  width: 100vw;
+  overflow-x: hidden;  /* 🔥 Evita barra de rolagem lateral */
 }
 
 /* Container principal */
@@ -18,7 +20,6 @@ body {
   min-height: 100vh;
 }
 
-
 /* Link do logo */
 .logo {
   text-decoration: none;
@@ -27,7 +28,7 @@ body {
 
 /* Conteúdo principal */
 .app-content {
-  padding: 80px 20px 20px;
+  padding: 60px 20px 20px;  /* 🔥 Reduzi o espaço no topo para não empurrar o NavBar */
   flex: 1;
 }
 
@@ -38,6 +39,7 @@ body {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+  width: 100%; /* 🔥 Garante que o rodapé ocupe a largura toda */
 }
 
 /* Responsividade */
@@ -47,7 +49,7 @@ body {
   }
 
   .app-content {
-      padding: 100px 15px 20px;
+      padding: 80px 15px 20px; /* 🔥 Ajuste para evitar espaço extra no topo */
   }
 
   .app-footer {

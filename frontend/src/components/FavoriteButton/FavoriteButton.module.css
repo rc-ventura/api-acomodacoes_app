@@ -1,6 +1,6 @@
 /* Estilização do botão de favorito */
 .favoriteButton {
-    background: white;
+    background: none;
     color: #333;
     border: none;
     padding: 8px 15px;
@@ -15,13 +15,13 @@
 }
 
 .favoriteButton:hover {
-    background: white;
+    background: none;
     color: red;
     transform: scale(1.50);
 }
 
 .favoriteButton.favorited {
-    background: white;
+    background: none;
     color: white;
     border-color: #ff4757;
 }
