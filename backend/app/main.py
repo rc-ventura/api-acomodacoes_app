@@ -1,9 +1,16 @@
+#Imports
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from app.data import accommodations  # Importação absoluta
+from app.data import accommodations  
+
+#Instanciando a aplicação
 
 app = Flask(__name__)
 CORS(app)
+
+
+#Rotas
 
 @app.route('/api/v1/acomodacoes', methods=['GET'])
 def get_accommodations():
@@ -20,5 +27,7 @@ def get_accommodation(id):
         return jsonify(accommodation)
     return jsonify({"error": "Acomodação não encontrada"}), 404
 
+#Execução
+
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000,debug=True)
+    app.run(host="0.0.0.0", port=5001,debug=True)

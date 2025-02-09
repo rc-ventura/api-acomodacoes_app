@@ -1,11 +1,11 @@
 /* Estilização do botão de favorito */
-.favorite-button {
+.favoriteButton {
     background: white;
     color: #333;
-    border: 2px solid #007bff;
+    border: none;
     padding: 8px 15px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: flex;
@@ -14,26 +14,26 @@
     font-weight: bold;
 }
 
-.favorite-button:hover {
-    background: #007bff;
-    color: white;
-    transform: scale(1.05);
+.favoriteButton:hover {
+    background: white;
+    color: red;
+    transform: scale(1.50);
 }
 
-.favorite-button.favorited {
-    background: #ff4757;
+.favoriteButton.favorited {
+    background: white;
     color: white;
     border-color: #ff4757;
 }
 
-.favorite-button.favorited:hover {
-    background: #e84118;
+.favoriteButton.favorited:hover {
+    background: white;
     border-color: #e84118;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .favorite-button {
+    .favoriteButton {
         font-size: 14px;
         padding: 6px 12px;
     }

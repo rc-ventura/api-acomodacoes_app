@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './FavoriteButton.css';
+import styles from './FavoriteButton.module.css'; // Importando estilos
 
 const FavoriteButton = ({ accommodation }) => {
     const [isFavorited, setIsFavorited] = useState(false);
@@ -30,8 +30,11 @@ const FavoriteButton = ({ accommodation }) => {
     };
 
     return (
-        <button className={`favorite-button ${isFavorited ? 'favorited' : ''}`} onClick={handleFavorite}>
-            {isFavorited ? '❤️ Favoritado' : '🤍 Favoritar'}
+        <button
+            className={`${styles.favoriteButton} ${isFavorited ? styles.favorited : ''}`}
+            onClick={handleFavorite}
+        >
+            {isFavorited ? '❤️' : '🤍'}
         </button>
     );
 };

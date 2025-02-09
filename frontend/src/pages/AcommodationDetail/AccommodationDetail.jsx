@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import "./AccommodationDetail.css"; // Importando o CSS
+import styles from './AccommodationDetail.module.css'; // Importando os estilos como um módulo
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
 
 const AccommodationDetail = () => {
@@ -10,9 +10,8 @@ const AccommodationDetail = () => {
   
   const { id } = useParams(); 
 
-// A URL da API agora vem da variável de ambiente
-const apiUrl = process.env.REACT_APP_API_URL;
-
+  // A URL da API agora vem da variável de ambiente
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     axios.get(`${apiUrl}/acomodacoes/${id}`)
@@ -24,27 +23,26 @@ const apiUrl = process.env.REACT_APP_API_URL;
         setError("Erro ao carregar os detalhes da acomodação");
         console.error("Erro ao buscar os detalhes:", error);
       });
-  }, [apiUrl,id]);
+  }, [apiUrl, id]);
 
   if (error) {
-    return <p className="error-message">{error}</p>;
+    return <p className={styles.errorMessage}>{error}</p>;
   }
 
   if (!accommodation) {
-    return <p className="loading-message">Carregando...</p>;
+    return <p className={styles.loadingMessage}>Carregando...</p>;
   }
 
   return (
-    <div className="accommodation-detail-container">
-      <h1 className="accommodation-title">{accommodation.nome}</h1>
-      
-      <div className="accommodation-detail">
-        <img src={accommodation.imagem} alt={accommodation.nome} className="accommodation-image" />
+    <div className={styles.accommodationDetailContainer}>
+      <h1 className={styles.accommodationTitle}>{accommodation.nome}</h1>
+      <div className={styles.accommodationDetail}>
+        <img src={accommodation.imagem} alt={accommodation.nome} className={styles.accommodationImage} />
         
-        <div className="accommodation-info">
+        <div className={styles.accommodationInfo}>
           <p><strong>Localização:</strong> {accommodation.localizacao}</p>
-          <p className="price"><strong>Preço:</strong> R$ {accommodation.preco_noite} por noite</p>
-          <p className="description"><strong>Descrição:</strong> {accommodation.descricao}</p>
+          <p className={styles.price}><strong>Preço:</strong> R$ {accommodation.preco_noite} por noite</p>
+          <p className={styles.description}><strong>Descrição:</strong> {accommodation.descricao}</p>
           <FavoriteButton accommodation={accommodation} />
         </div>
       </div>

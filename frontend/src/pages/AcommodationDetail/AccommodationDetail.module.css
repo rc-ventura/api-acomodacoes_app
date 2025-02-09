@@ -1,5 +1,5 @@
 /* Container principal */
-.accommodation-detail-container {
+.accommodationDetailContainer {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
@@ -7,15 +7,14 @@
 }
 
 /* Título */
-.accommodation-title {
+.accommodationTitle {
   font-size: 28px;
   color: #333;
   margin-bottom: 20px;
-  
 }
 
 /* Layout responsivo */
-.accommodation-detail {
+.accommodationDetail {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -28,7 +27,7 @@
 }
 
 /* Imagem */
-.accommodation-image {
+.accommodationImage {
   width: 100%;
   max-width: 450px;
   height: auto;
@@ -36,7 +35,7 @@
 }
 
 /* Informações */
-.accommodation-info {
+.accommodationInfo {
   max-width: 450px;
   text-align: left;
 }
@@ -57,7 +56,7 @@
 }
 
 /* Mensagens de erro e carregamento */
-.error-message, .loading-message {
+.errorMessage, .loadingMessage {
   color: red;
   font-size: 18px;
   font-weight: bold;
@@ -65,12 +64,12 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .accommodation-detail {
+  .accommodationDetail {
     flex-direction: column;
     text-align: center;
   }
 
-  .accommodation-info {
+  .accommodationInfo {
     max-width: 100%;
   }
 }

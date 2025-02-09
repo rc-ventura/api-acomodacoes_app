@@ -5,6 +5,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 import AccommodationList from "./pages/AccomodationList/AccommodationList";
 import NavBar from "./components/NavBar/NavBar";
 import AccommodationDetail from "./pages/AcommodationDetail/AccommodationDetail";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,7 +13,6 @@ function App() {
       <div className="app-container">
         {/* Cabeçalho  */}
          <NavBar/>
-
         <main className="app-content">
           <Routes>
             <Route path="/acomodacoes" element={<AccommodationList />} />
@@ -23,10 +23,7 @@ function App() {
           </Routes>
         </main>
 
-        {/* Rodapé */}
-        <footer className="app-footer">
-          © {new Date().getFullYear()} Acomodações | Feito com 💙
-        </footer>
+        <Footer/>
       </div>
     </Router>
   );

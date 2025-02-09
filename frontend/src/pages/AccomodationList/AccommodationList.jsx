@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./AccommodationList.css";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
-
+import SearchInput from "../../components/SearchInput/SearchInput";
+import DynamicPageTitle from "../../components/TitleSubtitle/TitleSubtitle";
+import styles from "./AccommodationList.module.css"; // Importando estilos
 
 const AccommodationList = () => {
     const [accommodations, setAccommodations] = useState([]);
@@ -52,32 +53,33 @@ const AccommodationList = () => {
     };
 
     return (
-        <div className="accommodations-container">
-            <h1>Acomodações Disponíveis</h1>
+        <div className={styles.accommodationsContainer}> {/* Usando CSS Module */}
 
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Filtrar por cidade"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
+            <DynamicPageTitle/>
+            
+            <SearchInput 
+                value={city} 
+                onChange={(e) => setCity(e.target.value)} 
+                onSearch={handleSearch} 
                 />
-                <button onClick={handleSearch}>Buscar</button>
-            </div>
 
-            {error && <p className="error">{error}</p>}
-            {filteredAccommodations.length === 0 && !error && <p className="no-results">Nenhuma acomodação encontrada.</p>}
+            {error && <p className={styles.error}>{error}</p>}
+            {filteredAccommodations.length === 0 && !error && <p className={styles.noResults}>Nenhuma acomodação encontrada.</p>}
 
-            <div className="accommodation-grid">
+            <div className={styles.accommodationGrid}>
+                
                 {filteredAccommodations.map((acc) => (
-                    <div key={acc.id} className="accommodation-card">
-                        <Link to={`/acomodacao/${acc.id}`} className="image-link">
-                            <img src={acc.imagem} alt={acc.nome} className="accommodation-image" />
+                    <div key={acc.id} className={styles.accommodationCard}>
+                       
+                        <Link to={`/acomodacao/${acc.id}`} className={styles.imageLink}>
+                            <img src={acc.imagem} alt={acc.nome} className={styles.accommodationImage} />
                         </Link>
-                        <div className="accommodation-info">
+
+                        <div className={styles.accommodationInfo}>
                             <h3>{acc.nome}</h3>
-                            <p className="location">{acc.localizacao}</p>
-                            <p className="price">R$ {acc.preco_noite} por noite</p>
+                            <p className={styles.location}>{acc.localizacao}</p>
+                            <p className={styles.price}>R$ {acc.preco_noite} por noite</p>
+                           
                             <FavoriteButton accommodation={acc} />
                         </div>
                     </div>
