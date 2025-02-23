@@ -1,11 +1,17 @@
 accommodations = [
+    
     {
         "id": 1,
         "nome": "Apartamento Beira-Mar",
         "imagem": "https://picsum.photos/300",
         "preco_noite": 350,
         "localizacao": "Florianópolis, SC",
-        "descricao": "Apartamento aconchegante com vista para o mar"
+        "summary": "Apartamento aconchegante com vista incrível para o mar.",
+        "descricao": "Apartamento confortável e bem equipado, perfeito para quem busca tranquilidade e proximidade com a praia.",
+        "rooms": 2,
+        "bathrooms": 1,
+        "garage": 1,
+        "area": "65 m²"
     },
     {
         "id": 2,
@@ -13,22 +19,115 @@ accommodations = [
         "imagem": "https://picsum.photos/301",
         "preco_noite": 500,
         "localizacao": "Campos do Jordão, SP",
-        "descricao": "Chalé com lareira e vista para a montanha"
+        "summary": "Chalé romântico com lareira e vista panorâmica.",
+        "descricao": "Chalé encantador, ideal para casais que desejam relaxar em meio à natureza, com lareira e um belo deck.",
+        "rooms": 3,
+        "bathrooms": 2,
+        "garage": 2,
+        "area": "120 m²"
     },
-{
-    "id": 3,
-    "nome": "Casa de Praia Luxuosa",
-    "imagem": "https://picsum.photos/303",
-    "preco_noite": 750,
-    "localizacao": "Porto de Galinhas, PE",
-    "descricao": "Casa espaçosa e sofisticada, com piscina privativa e acesso direto à praia paradisíaca."
-},
-{
-    "id": 4,
-    "nome": "Loft Moderno no Centro",
-    "imagem": "https://picsum.photos/302",
-    "preco_noite": 400,
-    "localizacao": "São Paulo, SP",
-    "descricao": "Loft elegante e bem localizado, ideal para viagens a trabalho ou lazer."
-}
+    {
+        "id": 3,
+        "nome": "Casa de Praia Luxuosa",
+        "imagem": "https://picsum.photos/303",
+        "preco_noite": 750,
+        "localizacao": "Porto de Galinhas, PE",
+        "summary": "Casa sofisticada com piscina privativa e acesso direto à praia.",
+        "descricao": "Residência ampla e moderna, equipada com piscina, área gourmet e acesso direto a uma das praias mais lindas do Brasil.",
+        "rooms": 4,
+        "bathrooms": 3,
+        "garage": 2,
+        "area": "200 m²"
+    },
+    {
+        "id": 4,
+        "nome": "Loft Moderno no Centro",
+        "imagem": "https://picsum.photos/302",
+        "preco_noite": 400,
+        "localizacao": "São Paulo, SP",
+        "summary": "Loft elegante, bem localizado e funcional.",
+        "descricao": "Apartamento tipo loft com decoração moderna, próximo a restaurantes, bares e centros empresariais, ideal para curtas estadias.",
+        "rooms": 1,
+        "bathrooms": 1,
+        "garage": 0,
+        "area": "50 m²"
+    },
+    {
+        "id": 5,
+        "nome": "Pousada Charmosa",
+        "imagem": "https://picsum.photos/304",
+        "preco_noite": 280,
+        "localizacao": "Paraty, RJ",
+        "summary": "Pousada aconchegante cercada pela natureza exuberante.",
+        "descricao": "Pousada rústica e confortável, com quartos espaçosos, café da manhã incluso e um belo jardim tropical.",
+        "rooms": 3,
+        "bathrooms": 2,
+        "garage": 1,
+        "area": "90 m²"
+    },
+    {
+        "id": 6,
+        "nome": "Flat Executivo",
+        "imagem": "https://picsum.photos/305",
+        "preco_noite": 320,
+        "localizacao": "Brasília, DF",
+        "summary": "Flat funcional e moderno para estadias rápidas.",
+        "descricao": "Localizado no coração da capital, esse flat é ideal para quem busca praticidade e conforto, com serviços de hotelaria.",
+        "rooms": 1,
+        "bathrooms": 1,
+        "garage": 1,
+        "area": "55 m²"
+    },
+    {
+        "id": 7,
+        "nome": "Cabana Romântica",
+        "imagem": "https://picsum.photos/306",
+        "preco_noite": 600,
+        "localizacao": "Gramado, RS",
+        "summary": "Cabana charmosa em meio às montanhas.",
+        "descricao": "Cabana exclusiva com decoração rústica, lareira e banheira de hidromassagem, perfeita para momentos especiais a dois.",
+        "rooms": 2,
+        "bathrooms": 1,
+        "garage": 1,
+        "area": "80 m²"
+    },
+    {
+        "id": 8,
+        "nome": "Casa no Campo",
+        "imagem": "https://picsum.photos/307",
+        "preco_noite": 450,
+        "localizacao": "Monte Verde, MG",
+        "summary": "Casa espaçosa cercada pelo verde das montanhas.",
+        "descricao": "Residência ampla e confortável, com lareira, jardim florido e espaços ideais para relaxar e curtir a natureza.",
+        "rooms": 3,
+        "bathrooms": 2,
+        "garage": 2,
+        "area": "150 m²"
+    },
+    {
+        "id": 9,
+        "nome": "Resort All Inclusive",
+        "imagem": "https://picsum.photos/308",
+        "preco_noite": 1200,
+        "localizacao": "Porto Seguro, BA",
+        "summary": "Resort de luxo com tudo incluso para toda a família.",
+        "descricao": "Infraestrutura completa com piscinas, spa, atividades recreativas e diversas opções gastronômicas à beira-mar.",
+        "rooms": 5,
+        "bathrooms": 4,
+        "garage": 3,
+        "area": "300 m²"
+    },
+    {
+        "id": 10,
+        "nome": "Suíte Urbana",
+        "imagem": "https://picsum.photos/309",
+        "preco_noite": 250,
+        "localizacao": "Curitiba, PR",
+        "summary": "Suíte moderna e compacta para viagens rápidas.",
+        "descricao": "Quarto bem decorado e funcional, ideal para quem busca um espaço confortável e bem localizado em Curitiba.",
+        "rooms": 1,
+        "bathrooms": 1,
+        "garage": 0,
+        "area": "40 m²"
+    }
 ]
