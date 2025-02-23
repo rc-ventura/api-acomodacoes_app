@@ -16,8 +16,9 @@ function App() {
         <main className="app-content">
           <Routes>
             <Route path="/acomodacoes" element={<AccommodationList />} />
-            <Route path="/acomodacao/:id" element={<AccommodationDetail />} />
-            <Route path="/home" element={<Home/>} />
+            <Route path="/acomodacao/:id" element={<AccommodationDetail  />} />
+            <Route path="/"  element={<Home/>} />
+            <Route path="/home"  element={<Home/>} />
             <Route path="/contato" element={<ContactPage/>} />
 
           </Routes>

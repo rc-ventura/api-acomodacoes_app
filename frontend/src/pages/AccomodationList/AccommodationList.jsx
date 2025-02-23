@@ -11,10 +11,11 @@ const AccommodationList = () => {
     const [filteredAccommodations, setFilteredAccommodations] = useState([]);
     const [error, setError] = useState(null);
     const [city, setCity] = useState("");
+    const [loading, setLoading] = useState(true);
 
     const apiUrl = process.env.REACT_APP_API_URL;
 
-    useEffect(() => {
+    useEffect(() =>  {
         axios.get(`${apiUrl}/acomodacoes`)
             .then(response => {
                 setAccommodations(response.data);
@@ -24,7 +25,13 @@ const AccommodationList = () => {
             .catch(error => {
                 console.error("Erro ao buscar acomodações:", error);
                 setError("Erro ao buscar acomodações.");
+            })
+            .finally(()=> {
+                setLoading(false);
+
             });
+
+
     }, [apiUrl]);
 
     const handleSearch = () => {
@@ -56,6 +63,8 @@ const AccommodationList = () => {
             {filteredAccommodations.length === 0 && !error && (
                 <Typography sx={{ textAlign: "center", marginTop: 2 }}>Nenhuma acomodação encontrada.</Typography>
             )}
+
+            {loading && <Typography sx={{ textAlign: "center", marginTop: 2 }}>Carregando...</Typography>}
 
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: "30px", justifyContent: "center", marginTop: "20px" }}>
                 {filteredAccommodations.map((acc) => (
