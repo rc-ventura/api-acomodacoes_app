@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 
 # Expôr a porta 5000 (Flask)
-EXPOSE 5000
+EXPOSE 5001
 
 # Iniciar a aplicação Flask com PYTHONPATH
 CMD PYTHONPATH=/app python -m app.main
