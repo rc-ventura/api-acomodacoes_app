@@ -27,7 +27,7 @@ const TitleSubtitle = ({
           fontSize: { 
             xs: "1.8rem", //  Reduzido para iPhone SE
             sm: "2.8rem", 
-            md: "4rem" ,
+            md: "3rem" ,
           },
           color: '#ff6f61',
           overflowWrap: "break-word", 
@@ -43,8 +43,8 @@ const TitleSubtitle = ({
         sx={{ 
           fontSize: { 
             xs: "1rem", // 🔥 Menor para iPhone SE
-            sm: "1.5rem", 
-            md: "2rem" 
+            sm: "1.2rem", 
+            md: "1.5rem" 
             
           },
           color: '#555',

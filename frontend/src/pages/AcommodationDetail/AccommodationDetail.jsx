@@ -75,17 +75,17 @@ const images = React.useMemo(() => accommodation?.imagem
       <Grid2 container spacing={2} alignItems='flex-start'>
         
         {/* 📌 Coluna Esquerda (Imagens e Informações) */}
-        <Grid2 item xs={12} md={5} sx={{ paddingLeft: 1, mx: 1, display: "flex", flexDirection: "column", gap: 2 }}>
+        <Grid2 item xs={12} md={5} sx={{ paddingLeft: 1, mx: 1, display: "flex", flexDirection: "column", gap: 2.5 }}>
         {/* Nome e Localização */}
-          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: "-10px" }}>
             {accommodation.nome}
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.secondary" >
             <strong>Localização:</strong> {accommodation.localizacao}
           </Typography>
 
           {/* Imagem Principal */}
-          <Card sx={{ width: "90%", boxShadow: 3, mt: 2 }}>
+          <Card sx={{ width: "100%", boxShadow: 3, mt: 2 }}>
             <CardMedia
               component="img"
               image={selectedImage}
@@ -103,7 +103,7 @@ const images = React.useMemo(() => accommodation?.imagem
                   width: 80,
                   height: 80,
                   cursor: "pointer",
-                  border: selectedImage === image ? "2px solid #1976d2" : "none",
+                  border: selectedImage === image ? "2px solid #ff6f61" : "none",
                   transition: "0.3s",
                 }}
                 onClick={() => setSelectedImage(image)}
@@ -119,17 +119,17 @@ const images = React.useMemo(() => accommodation?.imagem
           </Stack>
 
           {/* Containers Brancos para Descrição, Informações e Mapa */}
-          <Card sx={{ width: "90%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
-            <Typography variant="h6">Descrição</Typography>
+          <Card sx={{ width: "100%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
+            <Typography variant="h6"sx={{marginBottom:2}}>Descrição</Typography>
             <Typography variant="body2">{accommodation.descricao}</Typography>
           </Card>
 
-          <Card sx={{ width: "90%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
-            <Typography variant="h6">Mais Informações</Typography>
+          <Card sx={{ width: "100%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
+            <Typography variant="h6"sx={{marginBottom:2}}>Mais Informações</Typography>
             <Typography variant="body2">{accommodation.outra_info || "Informações adicionais sobre a acomodação."}</Typography>
           </Card>
 
-          <Card sx={{ width: "90%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
+          <Card sx={{ width: "100%", borderRadius: "8px", padding: 2, mt: 2, boxShadow: 2 }}>
             <Typography variant="h6">Mapa da Localização</Typography>
             <CardMedia
               component="img"
@@ -143,7 +143,7 @@ const images = React.useMemo(() => accommodation?.imagem
           <TitleSubtitle 
             title="Imóveis Semelhantes" 
             subtitle="Confira imóveis que você vai gostar" 
-            titleVariant="h3" sx={{  mt: 3 }} />
+            titleVariant="h2" sx={{  mt: 3 }} />
 
           </Grid2>
           {/* <Grid2 container spacing={2} sx={{ mt: 2 }}>
@@ -172,13 +172,13 @@ const images = React.useMemo(() => accommodation?.imagem
               overflow: "hidden" 
             }}
               >
-          <Typography variant="h5" sx={{ padding: '1rem', fontWeight: "bold", color: "#007bff", alignSelf: "flex-end", marginBottom: "2rem" }}>
+          <Typography variant="h5" sx={{ padding: '1rem', fontWeight: "bold", color: "#ff6f61", alignSelf: "flex-end", marginBottom: "2rem" }}>
             R$ {accommodation.preco_noite} por noite
           </Typography>
 
            {/* Botões de ação */}
            <Stack direction="row" spacing={2}  justifyContent="center">
-            <Button variant="contained" sx={{ width: '50%', backgroundColor: "#007bff", color: "white" }}>
+            <Button variant="contained" sx={{ width: '50%', backgroundColor: "#ff6f61", color: "white" }}>
               Reservar
             </Button>
             <Button variant="outlined" sx={{  width: '50%', borderColor: "#ff6f61", color: "#ff6f61" }}>
@@ -209,7 +209,7 @@ const images = React.useMemo(() => accommodation?.imagem
               <TextField label="E-mail" variant="outlined" fullWidth sx={{minWidth: 0}} />
               <TextField label="Telefone" variant="outlined" fullWidth sx={{minWidth: 0}} />
               <TextField label="Dúvidas" variant="outlined" sx={{minWidth: 0}} fullWidth multiline rows={4} />
-              <Button variant="contained" sx={{ backgroundColor: "#007bff", color: "white" }}>
+              <Button variant="contained" sx={{ backgroundColor: "#ff6f61", color: "white" }}>
                 Enviar
               </Button>
             </Stack>
