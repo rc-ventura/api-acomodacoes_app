@@ -5,16 +5,17 @@ const TitleSubtitle = ({
   title, 
   subtitle, 
   titleVariant,  
-  subtitleVariant
+  subtitleVariant,
+  mdMargin
 }) => {
   return (
     <Box 
       sx={{ 
         textAlign: { xs: "center", sm: "center", md: "left" }, 
-        marginLeft: { xs: "auto", sm: "auto", md: "5rem" }, 
+        marginLeft: { xs: "auto", sm: "auto", md: `${mdMargin}`}, 
         marginRight: { xs: "auto", sm: "auto", md: "0" }, 
-        marginTop: { xs: "1rem", sm: "1rem", md: "3rem" }, //  Reduzido para telas pequenas
-        marginBottom: "3rem",
+        marginTop: { xs: "1rem", sm: "1rem", md: "2rem" }, //  Reduzido para telas pequenas
+        marginBottom: "3em",
         maxWidth: { xs: "95%", sm: "85%", md: "60%" }, 
         padding: { xs: "5px", sm: "15px", md: "0px" }, //  Menos padding em telas pequenas
       }}

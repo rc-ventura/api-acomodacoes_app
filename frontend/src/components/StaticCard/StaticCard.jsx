@@ -1,56 +1,33 @@
-import React from "react";
-import { Box, Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Box, Card, CardContent, CardMedia, Typography, Button, CircularProgress } from "@mui/material";
 import IconSection from "../IconSection/IconSection";
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-const StaticCard = () => {
+const StaticCard = ({sliceCount}) => {
   
-    const cardData = [
-    { 
-       id: 1,
-      img: "https://picsum.photos/300/200?1",
-      title: "Loft Industrial",
-      price: "R$ 500.000",
-      description: "Loft moderno com design industrial, pé-direito alto e conceito aberto.",
-        rooms: 3,
-        bathrooms: 2,
-        garage: 1,
-        area: "150 m²"
-    },
-    {
-      id: 2,
-      img: "https://picsum.photos/300/200?2",
-      title: "Mansão Exclusiva",
-      price: "R$ 3.500.000",
-      description: "Mansão de luxo com piscina, spa e amplo jardim em bairro nobre.",
-        rooms: 5,
-        bathrooms: 4,
-        garage: 3,
-        area: "500 m²"
-    },
-    {
-      id: 3,
-      img: "https://picsum.photos/300/200?3",
-      title: "Apartamento Compacto",
-      price: "R$ 250.000",
-      description: "Apartamento pequeno, funcional e bem localizado para quem busca praticidade.",
-        rooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        area: "62 m²"
-    },
-    {
-        id:4,
-      img: "https://picsum.photos/300/200?4",
-      title: "Residência Contemporânea",
-      price: "R$ 800.000",
-      description: "Casa com arquitetura moderna, iluminação natural e tecnologia sustentável.",
-        rooms: 2,
-        bathrooms: 2,
-        garage: 2,
-        area: "100 m²"
-    },
-  ];
+   const [accommodationCards, setAccommodationCards] = useState([]);
+   const [loading, setLoading] = useState(true);
+   const [error, setError] =  useState(null);
+
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+    useEffect(()=> {
+      axios.get(`${apiUrl}/acomodacoes`).then(response => {
+        setAccommodationCards(response.data);
+        setError(null);
+      })
+      .catch(error => {
+        console.error(error.message);
+        setError("Erro ao buscar acomodações:");
+      })
+      .finally (()=> {
+        setLoading(false);
+      })
+    }, [apiUrl]);
+
+
 
   return (
     <Box
@@ -59,11 +36,23 @@ const StaticCard = () => {
         justifyContent: "center",
         flexWrap: "wrap",
         gap: "50px",
-        marginTop: "40px",
+        marginTop: "10px",
       }}
     >
-      {cardData.slice(0,3).map((card) => (
-        <Card
+       {/* 🔹 Se estiver carregando, exibe um spinner */}
+       {loading && <CircularProgress sx={{ margin: "auto" }} />}
+      
+      {/* 🔹 Se houver erro, exibe a mensagem de erro */}
+      {error && !loading && (
+        <Typography color="error" sx={{ textAlign: "center", width: "100%" }}>
+          {error}
+        </Typography>
+      )}
+
+      {/* 🔹 Se houver dados, exibe os cards */}
+      {!loading && !error && accommodationCards.length > 0 &&
+        accommodationCards.slice(0, sliceCount).map((card) => (
+        <Card 
           key={card.id}
           sx={{
             width: "300px",
@@ -115,21 +104,23 @@ const StaticCard = () => {
         </Box>
 
         {/* Conteúdo do Card */}
+        <Link to={`/acomodacao/${card.id}`} style={{ textDecoration: "none", color: "inherit" }}>
         <CardContent>
-          <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: "1px" }}>
             {card.title}
+            </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {card.localization} 
           </Typography>
-          <Typography variant="h6" sx={{ fontWeight: "bold", color: "#007bff" }}>
-            {card.price}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ marginTop: "10px" }}>
-            {card.description}
+          <Typography variant="h6" sx={{  padding: "2px", fontWeight: "bold", color: "#007bff", marginTop:"30px" }}>
+            R$ {card.price} por noite
           </Typography>
         </CardContent>
-
+        </Link>
         {/* Ícones do Card */}
         <IconSection icon={card} />
         </Card>
+      
       ))}
     </Box>
   );

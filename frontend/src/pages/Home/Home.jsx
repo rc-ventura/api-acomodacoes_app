@@ -13,6 +13,8 @@ const Home = () => {
                 subtitle="Encontre o seu imóvel dos sonhos"
                 titleVariant="h2" // Título maior
                 subtitleVariant="body2" // Subtítulo menor
+                mdMargin="4rem"
+
             
             />
             <ImageSlider/>
@@ -21,9 +23,11 @@ const Home = () => {
                 subtitle="Encontre o seu imóvel dos sonhos"
                 titleVariant="h2" // Título maior
                 subtitleVariant="body2" // Subtítulo menor
+                mdMargin="4rem"
             
             />
-            <StaticCard/>
+            
+            <StaticCard sliceCount={3}/>
         </div>
     );
 };

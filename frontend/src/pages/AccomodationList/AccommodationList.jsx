@@ -23,7 +23,7 @@ const AccommodationList = () => {
                 setError(null);
             })
             .catch(error => {
-                console.error("Erro ao buscar acomodações:", error);
+                console.error(error.message);
                 setError("Erro ao buscar acomodações.");
             })
             .finally(()=> {
@@ -86,8 +86,8 @@ const AccommodationList = () => {
                                 <CardMedia
                                     component="img"
                                     height="200"
-                                    image={acc.imagem}
-                                    alt={acc.nome}
+                                    image={acc.img}
+                                    alt={acc.title}
                                     sx={{ borderTopLeftRadius: "8px", borderTopRightRadius: "8px" }}
                                 />
                                 <Box
@@ -117,13 +117,16 @@ const AccommodationList = () => {
 
                             <CardContent>
                                 <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
-                                    {acc.nome}
+                                    {acc.title}
                                 </Typography>
-                                <Typography variant="body1" color="text.secondary" sx={{ marginTop: "10px" }}>
-                                    {acc.localizacao}
+                                <Typography variant="body2" color="text.secondary" sx={{ marginTop: "-10px" }}>
+                                    {acc.localization}
+                                </Typography>
+                                <Typography variant="body1" color="text.secondary" sx={{ marginTop: "30px", marginBottom:"30px" }}>
+                                    {acc.summary}
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: "bold", color: "#007bff", marginTop:"1rem"}}>
-                                    R$ {acc.preco_noite} por noite
+                                    R$ {acc.price} por noite
                                 </Typography>
                             </CardContent>
                             </Link>
@@ -136,3 +139,5 @@ const AccommodationList = () => {
 };
 
 export default AccommodationList;
+
+//FEATURE - create pagination

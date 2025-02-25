@@ -109,7 +109,7 @@ const ImageSlider = () => {
                   alt={`Imagem ${index + 1}`}
                   style={{
                     width: "100%",
-                    height: "auto",
+                    height: "500px",
                     objectFit: "cover",
                     borderRadius: "10px 0 0 10px",
                   }}
